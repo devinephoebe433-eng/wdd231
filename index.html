@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD 231 - Web Frontend Development I course home page">
+    <meta name="description" content="WDD 231 - Web Frontend Development I course home page featuring student portfolio and web development certificates">
     <meta name="author" content="Nabugobero Devine Phoebe">
     <title>WDD 231 | Course Home Page</title>
-    
-    <!-- Google Fonts -->
+
+    <!-- Google Fonts with required preconnect links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
     <!-- CSS Files -->
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
@@ -22,7 +23,7 @@
 <body>
     <header>
         <div class="logo-container">
-            <img src="images/devine.svg" alt="Logo" class="logo">
+            <img src="images/devine.svg" alt="Devine's World brand logo - abstract diamond design" class="logo">
             <span class="site-name">DEVINE'S WORLD</span>
         </div>
         <button class="hamburger" id="hamburger" aria-label="Toggle navigation">☰</button>
@@ -33,6 +34,8 @@
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="#">Chamber</a></li>
             <li><a href="#">Final</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </nav>
 
@@ -65,7 +68,7 @@ In the time to come, I hope to be a successful software engineer and make a posi
 a powerful Cardiologist</p>
                 </div>
                 <div class="student-photo-container">
-                    <img src="images/devine.jpg" alt="Student Photo" class="student-photo">
+                    <img src="images/devine.jpg" alt="Portrait of Nabugobero Devine Phoebe, web development student at BYU-IDAHO" class="student-photo">
                 </div>
             </div>
         </section>
@@ -96,6 +99,17 @@ a powerful Cardiologist</p>
 
             <div class="total-credits" id="total-credits">
                 The total credits for course listed above is 0
+            </div>
+        </section>
+
+        <!-- Location Section - Third required section -->
+        <section class="location-section">
+            <h2>My Location & Journey</h2>
+            <div class="location-content">
+                <p>📍 <strong>Based in:</strong> Kampala, Uganda - East Africa's tech hub</p>
+                <p>🌍 <strong>Learning Journey:</strong> Currently pursuing Software Engineering at BYU-IDAHO while building real-world web applications</p>
+                <p>🎯 <strong>Goals:</strong> To become a full-stack developer and contribute to Uganda's growing tech ecosystem</p>
+                <p>💡 <strong>Fun Fact:</strong> Kampala is known as the "City of Seven Hills" and has one of the youngest populations in the world!</p>
             </div>
         </section>
     </main>
