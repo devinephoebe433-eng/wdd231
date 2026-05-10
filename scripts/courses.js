@@ -19,29 +19,29 @@ let currentFilter = 'all';
 // Display courses in table
 function displayCourses() {
     let filteredCourses = courses;
-    
+
     if (currentFilter !== 'all') {
         filteredCourses = courses.filter(course => course.category === currentFilter);
     }
-    
+
     // Clear table
     coursesTableBody.innerHTML = '';
-    
+
     // Add each course as a table row
     filteredCourses.forEach(course => {
         const row = document.createElement('tr');
         if (course.completed) {
             row.classList.add('completed');
         }
-        
+
         row.innerHTML = `
             <td class="course-code">${course.code}${course.completed ? '<span class="course-status"> ✓</span>' : ''}</td>
             <td>${course.credits}</td>
         `;
-        
+
         coursesTableBody.appendChild(row);
     });
-    
+
     // Calculate total credits
     const totalCredits = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
     totalCreditsSpan.innerHTML = `The total credits for course listed above is ${totalCredits}`;

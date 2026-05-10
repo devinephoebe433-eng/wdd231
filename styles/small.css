@@ -93,7 +93,8 @@ header {
 }
 
 .nav-menu a.active {
-    background-color: #3498db;
+    background-color: #21618c;
+    color: white;
     font-weight: 600;
 }
 
@@ -119,13 +120,13 @@ h2 {
     font-size: 1.5rem;
 }
 
-/* About Section - Screenshot Layout */
+/* About Section */
 .about-section {
     background: white;
     border-radius: 12px;
     padding: 1.5rem;
     margin-bottom: 2rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about-content {
@@ -154,7 +155,7 @@ h2 {
     object-fit: cover;
     background: linear-gradient(135deg, #2c3e50, #3498db);
     border: 3px solid #3498db;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Courses Section */
@@ -163,7 +164,7 @@ h2 {
     border-radius: 12px;
     padding: 1.5rem;
     margin-bottom: 2rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Filter Buttons */
@@ -191,7 +192,7 @@ h2 {
 }
 
 .filter-btn.active {
-    background-color: #3498db;
+    background-color: #21618c;
     color: white;
 }
 
@@ -281,7 +282,8 @@ footer {
     color: #3498db;
 }
 
-.copyright-info, .last-modified {
+.copyright-info,
+.last-modified {
     margin-top: 0.5rem;
     font-size: 0.85rem;
 }

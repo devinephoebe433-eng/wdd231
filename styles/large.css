@@ -1,5 +1,6 @@
 /* Large Screen Styles - 768px and up */
 @media screen and (min-width: 768px) {
+
     /* Header adjustments */
     header {
         padding: 1rem 2rem;
@@ -45,7 +46,7 @@
         font-size: 2.5rem;
     }
 
-    /* About Content - Side by Side Layout */
+    /* About Content */
     .about-content {
         flex-direction: row;
         align-items: flex-start;
@@ -84,13 +85,15 @@
         margin-bottom: 0;
     }
 
-    .copyright-info, .last-modified {
+    .copyright-info,
+    .last-modified {
         margin-top: 0;
     }
 }
 
 /* Large Desktop - 1024px and up */
 @media screen and (min-width: 1024px) {
+
     main {
         padding: 2rem;
     }
@@ -98,7 +101,7 @@
     h1 {
         font-size: 2.8rem;
     }
-    
+
     .student-photo {
         width: 200px;
         height: 200px;
