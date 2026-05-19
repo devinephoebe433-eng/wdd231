@@ -1,3 +1,16 @@
+.active {
+    background-color: #000;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+section {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 /* Base Styles */
 * {
     margin: 0;
