@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kampala Chamber Directory</title>
+
+    <meta name="description" content="Kampala Chamber of Commerce directory page">
+    <meta name="author" content="Phoebe Devine">
+
+    <!-- Facebook Meta -->
+    <meta property="og:title" content="Kampala Chamber Directory">
+    <meta property="og:description" content="Business directory for Kampala Chamber of Commerce">
+    <meta property="og:image" content="images/chamber-banner.jpg">
+    <meta property="og:url" content="https://yourusername.github.io/wdd231/chamber/directory.html">
+
+    <link rel="icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <h1>Kampala Chamber of Commerce</h1>
+
+    <button id="menu"></button>
+
+    <nav class="navigation">
+        <a href="directory.html" class="active">Directory</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="#">Join</a>
+        <a href="#">Discover</a>
+    </nav>
+</header>
+
+<main>
+
+    <h2>Business Directory</h2>
+
+    <div class="view-buttons">
+        <button id="grid">Grid</button>
+        <button id="list">List</button>
+    </div>
+
+    <section id="members" class="grid"></section>
+
+</main>
+
+<footer>
+    <p>Phoebe Devine | WDD 231 Project</p>
+    <p id="year"></p>
+    <p id="lastModified"></p>
+</footer>
+
+</body>
+</html>

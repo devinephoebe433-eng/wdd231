@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Kampala Tech Solutions",
+    "address": "Plot 12 Kampala Road",
+    "phone": "+256 700 111111",
+    "website": "https://www.kampalatech.com",
+    "image": "tech.jpg",
+    "membership": 3
+  },
+  {
+    "name": "Pearl Restaurant",
+    "address": "Ntinda Kampala",
+    "phone": "+256 700 222222",
+    "website": "https://www.pearlrestaurant.com",
+    "image": "restaurant.jpg",
+    "membership": 2
+  },
+  {
+    "name": "Sunrise Hotel",
+    "address": "Kololo Kampala",
+    "phone": "+256 700 333333",
+    "website": "https://www.sunrisehotel.com",
+    "image": "hotel.jpg",
+    "membership": 1
+  },
+  {
+    "name": "City Motors",
+    "address": "Jinja Road Kampala",
+    "phone": "+256 700 444444",
+    "website": "https://www.citymotors.com",
+    "image": "motors.jpg",
+    "membership": 3
+  },
+  {
+    "name": "Fresh Farm Market",
+    "address": "Nakasero Kampala",
+    "phone": "+256 700 555555",
+    "website": "https://www.freshfarm.com",
+    "image": "farm.jpg",
+    "membership": 2
+  },
+  {
+    "name": "Elite Fashion",
+    "address": "Acacia Mall",
+    "phone": "+256 700 666666",
+    "website": "https://www.elitefashion.com",
+    "image": "fashion.jpg",
+    "membership": 1
+  },
+  {
+    "name": "Smart Electronics",
+    "address": "Bugolobi Kampala",
+    "phone": "+256 700 777777",
+    "website": "https://www.smartelectronics.com",
+    "image": "electronics.jpg",
+    "membership": 3
+  }
+]
