@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+}
+
+/* HEADER */
+header {
+  background: #1d3557;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav a.active {
+  border-bottom: 2px solid gold;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 10px;
+  background: gold;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* SECTIONS */
+section {
+  padding: 20px;
+  background: white;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+/* WEATHER */
+#forecast p {
+  background: #e9ecef;
+  padding: 8px;
+  margin: 5px 0;
+}
+
+/* SPOTLIGHT */
+#spotlight-container {
+  display: grid;
+  gap: 10px;
+}
+
+.card {
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.card img {
+  width: 80px;
+  height: auto;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  background: #1d3557;
+  color: white;
+  padding: 10px;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .hero {
+    grid-column: span 2;
+  }
+
+  .spotlights {
+    grid-column: span 2;
+  }
+}
