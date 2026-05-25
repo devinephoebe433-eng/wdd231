@@ -1,61 +1,39 @@
-const url = 'data/members.json';
-const cards = document.querySelector('#members');
+const container = document.querySelector("#members");
 
 async function getMembers() {
-    const response = await fetch(url);
-    const data = await response.json();
+  const response = await fetch("data/members.json");
+  const data = await response.json();
+  displayMembers(data);
+}
 
-    displayMembers(data);
+function displayMembers(members) {
+  container.innerHTML = "";
+
+  members.forEach(member => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    card.innerHTML = `
+      <img src="images/${member.image}" alt="${member.name}">
+      <h3>${member.name}</h3>
+      <p>${member.address}</p>
+      <p>${member.phone}</p>
+      <a href="${member.website}" target="_blank">Visit Site</a>
+    `;
+
+    container.appendChild(card);
+  });
 }
 
 getMembers();
 
-const displayMembers = (members) => {
-
-    members.forEach((member) => {
-
-        const card = document.createElement('section');
-
-        const name = document.createElement('h3');
-        const address = document.createElement('p');
-        const phone = document.createElement('p');
-        const website = document.createElement('a');
-        const image = document.createElement('img');
-
-        name.textContent = member.name;
-        address.textContent = member.address;
-        phone.textContent = member.phone;
-
-        website.textContent = "Visit Website";
-        website.href = member.website;
-
-        image.setAttribute('src', `images/${member.image}`);
-        image.setAttribute('alt', member.name);
-        image.setAttribute('loading', 'lazy');
-        image.setAttribute('width', '300');
-
-        card.appendChild(image);
-        card.appendChild(name);
-        card.appendChild(address);
-        card.appendChild(phone);
-        card.appendChild(website);
-
-        cards.appendChild(card);
-    });
-};
-
-document.querySelector('#grid').addEventListener('click', () => {
-    cards.classList.add('grid');
-    cards.classList.remove('list');
+/* GRID / LIST TOGGLE */
+document.querySelector("#gridBtn").addEventListener("click", () => {
+  container.classList.add("grid");
+  container.classList.remove("list");
 });
 
-document.querySelector('#list').addEventListener('click', () => {
-    cards.classList.add('list');
-    cards.classList.remove('grid');
+document.querySelector("#listBtn").addEventListener("click", () => {
+  container.classList.add("list");
+  container.classList.remove("grid");
 });
-
-document.querySelector("#year").textContent =
-`© ${new Date().getFullYear()}`;
-
-document.querySelector("#lastModified").textContent =
-`Last Modified: ${document.lastModified}`;

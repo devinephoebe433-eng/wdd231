@@ -1,19 +1,12 @@
-@media screen and (min-width: 768px) {
+@media (min-width: 700px) {
 
-    #menu {
-        display: none;
-    }
+  .navigation {
+    flex-direction: row;
+    justify-content: center;
+  }
 
-    .navigation {
-        flex-direction: row;
-        justify-content: center;
-    }
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-    .navigation a {
-        display: block;
-    }
-
-    .grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
 }

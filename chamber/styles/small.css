@@ -1,87 +1,86 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  margin: 0;
+  background: #f8f9fa;
 }
 
-header,
-footer {
-    background: #1d3557;
-    color: white;
-    padding: 1rem;
-    text-align: center;
+/* HEADER */
+header {
+  background: #1d3557;
+  color: white;
+  text-align: center;
+  padding: 1rem;
 }
 
+/* NAV */
 .navigation {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .navigation a {
-    color: white;
-    padding: 1rem;
-    text-decoration: none;
-    display: none;
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
 }
 
 .navigation a:hover,
-.active {
-    background: #457b9d;
+.navigation a.active {
+  background: #457b9d;
 }
 
-#menu {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2rem;
-}
-
-#menu::before {
-    content: "☰";
-}
-
-#menu.open::before {
-    content: "❌";
-}
-
-.navigation.open a {
-    display: block;
-}
-
+/* MAIN */
 main {
-    padding: 1rem;
+  padding: 1rem;
 }
 
-.view-buttons {
-    margin-bottom: 1rem;
+/* BUTTONS */
+.controls {
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
+button {
+  padding: 0.5rem 1rem;
+  margin: 0.3rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* GRID */
 .grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 
-.grid section {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    text-align: center;
-}
-
-.grid img {
-    width: 100%;
-    height: auto;
-}
-
+/* LIST VIEW */
 .list {
-    display: flex;
-    flex-direction: column;
+  display: block;
 }
 
-.list section {
-    padding: 1rem;
-    border-bottom: 1px solid #ccc;
+.list .card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.list img {
-    display: none;
+/* CARD */
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+/* FOOTER */
+footer {
+  background: #1d3557;
+  color: white;
+  text-align: center;
+  padding: 1rem;
 }
