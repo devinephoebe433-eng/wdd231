@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
 }
 
@@ -20,6 +20,7 @@ footer {
     color: white;
     padding: 1rem;
     text-decoration: none;
+    display: none;
 }
 
 .navigation a:hover,
@@ -40,10 +41,6 @@ footer {
 
 #menu.open::before {
     content: "❌";
-}
-
-.navigation a {
-    display: none;
 }
 
 .navigation.open a {
