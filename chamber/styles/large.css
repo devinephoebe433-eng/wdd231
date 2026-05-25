@@ -1,12 +1,12 @@
-@media (min-width: 700px) {
+/* larger.css */
 
+@media (min-width: 768px) {
   .navigation {
     flex-direction: row;
     justify-content: center;
   }
 
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
+  .navigation a {
+    padding: 1rem 2rem;
   }
-
 }
