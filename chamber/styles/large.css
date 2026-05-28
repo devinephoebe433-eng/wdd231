@@ -1,7 +1,13 @@
 @media (min-width: 768px) {
 
+  /* HIDE HAMBURGER */
+  #hamburger {
+    display: none;
+  }
+
   /* NAV */
   .navigation {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
@@ -16,9 +22,8 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* LIST: tighter row layout */
+  /* LIST: no wrap on wider screens */
   .list .card {
-    flex-direction: row;
     flex-wrap: nowrap;
   }
 

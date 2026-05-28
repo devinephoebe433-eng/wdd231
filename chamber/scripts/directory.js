@@ -30,25 +30,23 @@ function displayMembers(members) {
 }
 
 /* GRID / LIST TOGGLE */
-document.querySelector("#gridBtn").addEventListener("click", () => {
+const gridBtn = document.querySelector("#gridBtn");
+const listBtn = document.querySelector("#listBtn");
+
+gridBtn.addEventListener("click", () => {
   container.classList.add("grid");
   container.classList.remove("list");
   container.querySelectorAll(".card-img").forEach(img => img.style.display = "");
+  gridBtn.setAttribute("aria-pressed", "true");
+  listBtn.setAttribute("aria-pressed", "false");
 });
 
-document.querySelector("#listBtn").addEventListener("click", () => {
+listBtn.addEventListener("click", () => {
   container.classList.add("list");
   container.classList.remove("grid");
   container.querySelectorAll(".card-img").forEach(img => img.style.display = "none");
-});
-
-/* WAYFINDING */
-const currentPage = location.pathname.split("/").pop() || "index.html";
-document.querySelectorAll(".navigation a").forEach(link => {
-  link.classList.remove("active");
-  if (link.getAttribute("href") === currentPage) {
-    link.classList.add("active");
-  }
+  listBtn.setAttribute("aria-pressed", "true");
+  gridBtn.setAttribute("aria-pressed", "false");
 });
 
 getMembers();
