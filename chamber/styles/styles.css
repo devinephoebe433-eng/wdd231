@@ -2,16 +2,18 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   background: #f4f4f4;
+  color: #222;
 }
 
 /* HEADER */
 header {
   background: #1d3557;
-  color: white;
+  color: #ffffff;
   padding: 1rem;
   text-align: center;
 }
 
+/* NAV */
 nav {
   display: flex;
   justify-content: center;
@@ -20,13 +22,13 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   padding: 10px;
 }
 
 nav a.active {
-  border-bottom: 2px solid gold;
+  border-bottom: 2px solid #ffd700;
 }
 
 /* HERO */
@@ -43,23 +45,23 @@ nav a.active {
   position: absolute;
   bottom: 20px;
   left: 20px;
-  color: white;
+  color: #ffffff;
 }
 
 .cta {
   display: inline-block;
   margin-top: 10px;
-  background: gold;
+  background: #ffd700;
   padding: 10px 15px;
   text-decoration: none;
-  color: black;
+  color: #000000;
   font-weight: bold;
 }
 
 /* SECTIONS */
 section {
   padding: 20px;
-  background: white;
+  background: #ffffff;
   margin: 10px;
   border-radius: 8px;
 }
@@ -78,9 +80,9 @@ section {
 }
 
 .card {
-  background: #fff;
+  background: #ffffff;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   border-radius: 8px;
   text-align: center;
 }
@@ -94,11 +96,11 @@ section {
 footer {
   text-align: center;
   background: #1d3557;
-  color: white;
+  color: #ffffff;
   padding: 10px;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE BASE */
 @media (min-width: 768px) {
   main {
     display: grid;

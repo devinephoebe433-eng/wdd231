@@ -1,11 +1,9 @@
 @media (min-width: 768px) {
 
-  /* HIDE HAMBURGER */
   #hamburger {
     display: none;
   }
 
-  /* NAV */
   .navigation {
     display: flex;
     flex-direction: row;
@@ -17,31 +15,24 @@
     padding: 0.6rem 1.5rem;
   }
 
-  /* GRID: 2 columns on tablet */
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* LIST: no wrap on wider screens */
   .list .card {
     flex-wrap: nowrap;
   }
 
-  /* JOIN PAGE */
   .join-main {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 30px;
     align-items: start;
   }
-
 }
 
 @media (min-width: 1024px) {
-
-  /* GRID: 3 columns on desktop */
   .grid {
     grid-template-columns: repeat(3, 1fr);
   }
-
 }
