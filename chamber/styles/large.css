@@ -8,19 +8,10 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .navigation a {
-    padding: 0.6rem 1.5rem;
   }
 
   .grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .list .card {
-    flex-wrap: nowrap;
   }
 
   .join-main {

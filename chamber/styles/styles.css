@@ -1,19 +1,19 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background: #f4f4f4;
-  color: #222;
+  background-color: #f4f4f4;
+  color: #222222;
 }
 
 /* HEADER */
 header {
-  background: #1d3557;
+  background-color: #1d3557;
   color: #ffffff;
   padding: 1rem;
   text-align: center;
 }
 
-/* NAV */
+/* NAVIGATION */
 nav {
   display: flex;
   justify-content: center;
@@ -51,24 +51,24 @@ nav a.active {
 .cta {
   display: inline-block;
   margin-top: 10px;
-  background: #ffd700;
-  padding: 10px 15px;
-  text-decoration: none;
+  background-color: #ffd700;
   color: #000000;
+  padding: 10px 15px;
   font-weight: bold;
+  text-decoration: none;
 }
 
 /* SECTIONS */
 section {
+  background-color: #ffffff;
   padding: 20px;
-  background: #ffffff;
   margin: 10px;
   border-radius: 8px;
 }
 
 /* WEATHER */
 #forecast p {
-  background: #e9ecef;
+  background-color: #e9ecef;
   padding: 8px;
   margin: 5px 0;
 }
@@ -80,39 +80,21 @@ section {
 }
 
 .card {
-  background: #ffffff;
-  padding: 10px;
+  background-color: #ffffff;
   border: 1px solid #dddddd;
   border-radius: 8px;
+  padding: 10px;
   text-align: center;
 }
 
 .card img {
   width: 80px;
-  height: auto;
 }
 
 /* FOOTER */
 footer {
-  text-align: center;
-  background: #1d3557;
+  background-color: #1d3557;
   color: #ffffff;
+  text-align: center;
   padding: 10px;
-}
-
-/* RESPONSIVE BASE */
-@media (min-width: 768px) {
-  main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-  }
-
-  .hero {
-    grid-column: span 2;
-  }
-
-  .spotlights {
-    grid-column: span 2;
-  }
 }
