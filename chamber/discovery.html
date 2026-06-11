@@ -3,18 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Discover | Chamber of Commerce</title>
 
+    <meta name="description" content="Explore the vibrant community through our Discover page, showcasing local businesses, attractions, and events.">
+
+    <meta name="author" content="Phoebe Devine">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Discover | Chamber of Commerce">
+    <meta property="og:description" content="Explore local attractions, businesses, and opportunities in our Chamber community.">
+    <meta property="og:image" content="https://devinephoebe433-eng.github.io/wdd231/chamber/images/chamber.jpg">
+    <meta property="og:url" content="https://devinephoebe433-eng.github.io/wdd231/chamber/discover.html">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/discover.css">
 
+    <!-- JavaScript -->
     <script type="module" src="scripts/discover.js" defer></script>
 </head>
 
 <body>
 
     <header>
-        <h1>Chamber of Commerce</h1>
-
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -26,24 +45,32 @@
     </header>
 
     <main>
-
         <h1>Discover Our Community</h1>
 
-        <section id="visit-message"></section>
+        <section id="visit-message">
+            <h2 class="visually-hidden">Visitor Information</h2>
+        </section>
 
-        <section id="places-container"></section>
+        <section id="places-container">
+            <h2 class="visually-hidden">Places to Discover</h2>
+        </section>
 
-        <!-- Modal for Learn More -->
         <dialog id="place-modal">
             <div id="modal-content">
                 <h2 id="modal-name"></h2>
-                <img id="modal-image" src="" alt="" />
+
+                <img
+                    id="modal-image"
+                    src="chamber/images/image.png"
+                    alt="Location image">
+
                 <address id="modal-address"></address>
+
                 <p id="modal-description"></p>
+
                 <button id="modal-close">Close</button>
             </div>
         </dialog>
-
     </main>
 
     <footer>
