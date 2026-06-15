@@ -68,6 +68,7 @@ document.querySelectorAll("#filters button").forEach(btn => {
 btn.addEventListener("click", () => {
 
 const filter = btn.dataset.filter;
+localStorage.setItem("selectedFilter", filter);
 
 if(filter === "all") {
 
