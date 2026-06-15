@@ -1,15 +1,4 @@
-/* =========================
-   LARGE SCREEN OVERRIDES
-   (Desktop: 768px+)
-========================= */
 
-:root {
-    --bg-cream: #F4EFE6;
-    --berry-red: #A63D56;
-    --sand-tan: #D9D1C1;
-    --charcoal-text: #2D2D2D;
-    --white: #FFFFFF;
-}
 
 /* =========================
    LAYOUT ADJUSTMENTS
