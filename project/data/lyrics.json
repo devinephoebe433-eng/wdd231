@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "Moonlight Echo",
+    "type": "Poetry",
+    "theme": "Love",
+    "readingTime": "3 min",
+    "content": "Moonlight whispers through silent skies..."
+  },
+  {
+    "id": 2,
+    "title": "Broken Stars",
+    "type": "Song",
+    "theme": "Pain",
+    "readingTime": "4 min",
+    "content": "Stars fall like memories..."
+  },
+  {
+    "id": 3,
+    "title": "Silent Rain",
+    "type": "Poetry",
+    "theme": "Sadness",
+    "readingTime": "2 min",
+    "content": "Rain speaks what hearts cannot..."
+  },
+  {
+    "id": 4,
+    "title": "Golden Light",
+    "type": "Song",
+    "theme": "Hope",
+    "readingTime": "3 min",
+    "content": "Light returns after darkness..."
+  },
+  {
+    "id": 5,
+    "title": "Empty Roads",
+    "type": "Poetry",
+    "theme": "Loneliness",
+    "readingTime": "3 min",
+    "content": "I walk alone in silence..."
+  },
+  {
+    "id": 6,
+    "title": "Fire Within",
+    "type": "Song",
+    "theme": "Strength",
+    "readingTime": "4 min",
+    "content": "Burning from inside..."
+  },
+  {
+    "id": 7,
+    "title": "Glass Heart",
+    "type": "Poetry",
+    "theme": "Love",
+    "readingTime": "3 min",
+    "content": "Fragile like glass..."
+  },
+  {
+    "id": 8,
+    "title": "Lost Dreams",
+    "type": "Song",
+    "theme": "Hope",
+    "readingTime": "5 min",
+    "content": "Dreams fade but never die..."
+  },
+  {
+    "id": 9,
+    "title": "Dark Ocean",
+    "type": "Poetry",
+    "theme": "Mystery",
+    "readingTime": "3 min",
+    "content": "Waves hide secrets..."
+  },
+  {
+    "id": 10,
+    "title": "Morning Rise",
+    "type": "Song",
+    "theme": "Hope",
+    "readingTime": "2 min",
+    "content": "Sun rises again..."
+  },
+  {
+    "id": 11,
+    "title": "Falling Leaves",
+    "type": "Poetry",
+    "theme": "Change",
+    "readingTime": "3 min",
+    "content": "Everything must fall..."
+  },
+  {
+    "id": 12,
+    "title": "Echo Heart",
+    "type": "Song",
+    "theme": "Love",
+    "readingTime": "4 min",
+    "content": "Your voice stays..."
+  },
+  {
+    "id": 13,
+    "title": "Frozen Time",
+    "type": "Poetry",
+    "theme": "Memory",
+    "readingTime": "3 min",
+    "content": "Time stands still..."
+  },
+  {
+    "id": 14,
+    "title": "Burning Sky",
+    "type": "Song",
+    "theme": "Passion",
+    "readingTime": "4 min",
+    "content": "Sky on fire..."
+  },
+  {
+    "id": 15,
+    "title": "Final Whisper",
+    "type": "Poetry",
+    "theme": "Endings",
+    "readingTime": "3 min",
+    "content": "Everything fades..."
+  }
+]

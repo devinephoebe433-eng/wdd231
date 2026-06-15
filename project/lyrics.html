@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Lyrics | Devine's Ethereal Lyricist</title>
+  <meta name="description" content="Browse 15+ original lyrics and poems by Devine Phoebe." />
+  <meta name="author" content="Devine Phoebe" />
+
+  <link rel="stylesheet" href="styles/final.css" />
+  <link rel="stylesheet" href="styles/final-large.css" />
+
+  <script type="module" src="scripts/lyrics.js" defer></script>
+</head>
+
+<body>
+<header>
+  <h1>Lyrics Collection</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="lyrics.html">Lyrics</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<main>
+  <h2>All Lyrics</h2>
+
+  <div id="filters">
+    <button data-filter="all">All</button>
+    <button data-filter="Poetry">Poetry</button>
+    <button data-filter="Song">Song</button>
+  </div>
+
+  <div id="lyricsContainer"></div>
+</main>
+
+<dialog id="modal">
+  <div>
+    <h3 id="modalTitle"></h3>
+    <p id="modalContent"></p>
+    <button id="closeModal">Close</button>
+  </div>
+</dialog>
+
+<footer>
+  <p>© 2026 Devine Phoebe</p>
+</footer>
+</body>
+</html>

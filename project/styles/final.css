@@ -1,0 +1,257 @@
+:root {
+  --bg: #F4EFE6;
+  --primary: #A63D56;
+  --dark: #222;
+  --white: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--dark);
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary);
+  padding: 1rem 2rem;
+}
+
+.logo {
+  color: white;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.active {
+  border-bottom: 2px solid white;
+}
+
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 3rem 2rem;
+  gap: 2rem;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* IMAGES */
+.hero-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.hero-images img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.hero-images img:hover {
+  transform: scale(1.05);
+}
+
+/* SECTION */
+.section-title {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+section h2 {
+  color: #A63D56;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 2rem;
+  gap: 1.5rem;
+}
+
+/* CARD */
+.card {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  animation: fadeIn 0.5s ease;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* TEXT */
+.text {
+  white-space: pre-line;
+  line-height: 1.8;
+  font-size: 0.95rem;
+  padding: 10px 12px;
+}
+
+/* SONG STYLE */
+.card:has(.badge.song) .text {
+  background: rgba(79, 140, 255, 0.08);
+  border-left: 3px solid #4f8cff;
+  font-style: italic;
+}
+
+/* POEM STYLE */
+.card:has(.badge.poem) .text {
+  background: rgba(155, 92, 255, 0.08);
+  border-left: 3px solid #9b5cff;
+}
+
+/* AUDIO */
+audio {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* BADGE */
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.badge.song {
+  background: #4f8cff;
+  color: white;
+}
+
+.badge.poem {
+  background: #9b5cff;
+  color: white;
+}
+
+/* READ MORE BUTTON */
+.read-more {
+  margin-top: 10px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.read-more:hover {
+  transform: translateY(-2px);
+}
+
+/* FULL TEXT (IMPORTANT FIX) */
+.full-text {
+  margin-top: 12px;
+  padding: 14px;
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.07);
+  border-left: 4px solid #a29bfe;
+
+  line-height: 1.7;
+  font-size: 0.95rem;
+  color: #333;
+
+  white-space: pre-line;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* HIDDEN STATE (CRITICAL FIX) */
+.hidden {
+  display: none !important;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eee;
+  margin-top: 2rem;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-images {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-images img {
+    height: 200px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* STATUS MESSAGES */
+.success { color: #4ade80; }
+.error { color: #f87171; }
+.info { color: #60a5fa; }
