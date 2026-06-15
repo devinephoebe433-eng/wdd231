@@ -1,21 +1,12 @@
-const menuBtn = document.getElementById("menuBtn");
-const nav = document.getElementById("nav");
+const menuBtn = document.querySelector("#menuBtn");
+const navLinks = document.querySelector(".nav-links");
 
-menuBtn?.addEventListener("click", () => {
-  nav.classList.toggle("show");
+if(menuBtn){
+menuBtn.addEventListener("click", () => {
+navLinks.classList.toggle("show");
 });
+}
 
-fetch("data/lyrics.json")
-  .then(res => res.json())
-  .then(data => {
-    const featured = document.getElementById("featured");
+const visits = Number(localStorage.getItem("visits")) || 0;
 
-    data.slice(0, 3).forEach(item => {
-      featured.innerHTML += `
-        <div class="card">
-          <h3>${item.title}</h3>
-          <p>${item.theme}</p>
-        </div>
-      `;
-    });
-  });
+localStorage.setItem("visits", visits + 1);

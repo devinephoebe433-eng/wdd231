@@ -1,41 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>About | Devine's Ethereal Lyricist</title>
-  <meta name="description" content="Learn about Devine's creative writing journey." />
-  <meta name="author" content="Devine Phoebe" />
+<title>Contact | Devine's Ethereal Lyricist</title>
 
-  <link rel="stylesheet" href="styles/final.css" />
+<meta name="description" content="Contact Devine's Ethereal Lyricist and share your thoughts, collaborations, and creative ideas.">
+
+<meta name="author" content="Devine Phoebe">
+
+<link rel="icon" href="images/favicon.png">
+
+<link rel="stylesheet" href="styles/final.css">
+<link rel="stylesheet" href="styles/final-large.css">
+
+<script defer src="scripts/main.js"></script>
 </head>
 
 <body>
+
 <header>
-  <h1>About Me</h1>
+<nav class="navbar">
+<h2 class="logo">Ethereal</h2>
+
+<button id="menuBtn">&#9776;</button>
+
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="lyrics.html">Music & Poems</a></li>
+<li><a href="about.html" class="active">Contact</a></li>
+</ul>
+</nav>
 </header>
 
 <main>
-  <p>This website is a collection of original poetry and lyrics written by Devine Phoebe.</p>
 
-  <form action="submit.html" method="get">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Email" required>
+<section>
+<h1>Contact Me</h1>
 
-    <select name="genre">
-      <option>Poetry</option>
-      <option>Song</option>
-    </select>
+<form action="thankyou.html" method="get">
 
-    <textarea name="message" placeholder="Your message"></textarea>
+<label>
+Full Name
+<input type="text" name="name" required>
+</label>
 
-    <button type="submit">Send</button>
-  </form>
+<label>
+Email
+<input type="email" name="email" required>
+</label>
+
+<label>
+Favorite Genre
+<select name="genre">
+<option>Poetry</option>
+<option>Music</option>
+<option>Both</option>
+</select>
+</label>
+
+<label>
+Message
+<textarea name="message" rows="5"></textarea>
+</label>
+
+<input type="submit" value="Send Message">
+
+</form>
+</section>
+
 </main>
 
 <footer>
-  <p>© 2026 Devine Phoebe</p>
+<p>© 2026 Devine Phoebe</p>
+<a href="attributions.html">Attributions</a>
+<a href="https://youtube.com" target="_blank">Project Video</a>
 </footer>
+
 </body>
 </html>

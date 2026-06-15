@@ -1,51 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Lyrics | Devine's Ethereal Lyricist</title>
-  <meta name="description" content="Browse 15+ original lyrics and poems by Devine Phoebe." />
-  <meta name="author" content="Devine Phoebe" />
+<meta charset="UTF-8">
 
-  <link rel="stylesheet" href="styles/final.css" />
-  <link rel="stylesheet" href="styles/final-large.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script type="module" src="scripts/lyrics.js" defer></script>
+<title>Music & Poems | Devine's Ethereal Lyricist</title>
+
+<meta name="description" content="Browse a collection of original songs and poems written by Devine Phoebe.">
+
+<meta name="author" content="Devine Phoebe">
+
+<meta property="og:title" content="Music & Poems | Devine's Ethereal Lyricist">
+
+<meta property="og:description" content="Explore original poems and songs through an interactive lyrical collection.">
+
+<meta property="og:image" content="https://devinephoebe433-eng.github.io/wdd231/project/images/poetry.jpg">
+
+<link rel="icon" href="images/favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles/final.css">
+<link rel="stylesheet" href="styles/final-large.css">
+
+<script type="module" src="scripts/lyrics.js"></script>
+
 </head>
 
 <body>
+
 <header>
-  <h1>Lyrics Collection</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="lyrics.html">Lyrics</a>
-    <a href="about.html">About</a>
-  </nav>
+
+<nav class="navbar">
+
+<h2 class="logo">Ethereal Lyricist</h2>
+
+<button id="menuBtn" class="menu-btn">
+☰
+</button>
+
+<ul class="nav-links" id="navLinks">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="lyrics.html" class="active">Music & Poems</a></li>
+
+<li><a href="about.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
 </header>
 
 <main>
-  <h2>All Lyrics</h2>
 
-  <div id="filters">
-    <button data-filter="all">All</button>
-    <button data-filter="Poetry">Poetry</button>
-    <button data-filter="Song">Song</button>
-  </div>
+<section>
 
-  <div id="lyricsContainer"></div>
+<h1>Music & Poems Collection</h1>
+
+<p>
+Browse original lyrical creations and poetry.
+</p>
+
+<div class="filters">
+
+<button data-filter="all">All</button>
+
+<button data-filter="Song">Songs</button>
+
+<button data-filter="Poetry">Poetry</button>
+
+</div>
+
+<div id="lyricsContainer" class="grid"></div>
+
+</section>
+
 </main>
 
 <dialog id="modal">
-  <div>
-    <h3 id="modalTitle"></h3>
-    <p id="modalContent"></p>
-    <button id="closeModal">Close</button>
-  </div>
+
+<h2 id="modalTitle"></h2>
+
+<p id="modalContent"></p>
+
+<button id="closeModal">
+Close
+</button>
+
 </dialog>
 
 <footer>
-  <p>© 2026 Devine Phoebe</p>
+
+<p>© 2026 Devine Phoebe</p>
+
+<a href="attributions.html">Attributions</a>
+
+<a href="https://youtube.com" target="_blank">
+Project Video
+</a>
+
 </footer>
+
 </body>
 </html>

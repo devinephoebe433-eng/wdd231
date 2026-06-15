@@ -1,61 +1,93 @@
-import "./modal.js";
+import { openModal, closeModal } from "./modal.js";
 
-const container = document.getElementById("lyricsContainer");
-const modal = document.getElementById("modal");
-const modalTitle = document.getElementById("modalTitle");
-const modalContent = document.getElementById("modalContent");
-const closeModal = document.getElementById("closeModal");
+const container = document.querySelector("#lyricsContainer");
 
-let allData = [];
+const modalClose = document.querySelector("#closeModal");
 
-async function loadData() {
-  try {
-    const res = await fetch("data/lyrics.json");
-    const data = await res.json();
-    allData = data;
-    display(data);
-  } catch (error) {
-    console.log("Error loading data", error);
-  }
+let allLyrics = [];
+
+async function getLyrics() {
+
+try {
+
+const response = await fetch("data/lyrics.json");
+
+const data = await response.json();
+
+allLyrics = data;
+
+displayLyrics(data);
+
+}
+catch(error) {
+
+console.error(error);
+
 }
 
-function display(items) {
-  container.innerHTML = "";
+}
 
-  items.forEach(item => {
-    const div = document.createElement("div");
+function displayLyrics(data) {
 
-    div.innerHTML = `
-      <h3>${item.title}</h3>
-      <p>${item.theme}</p>
-      <p>${item.readingTime}</p>
-      <button class="viewBtn">View</button>
-    `;
+container.innerHTML = "";
 
-    div.querySelector(".viewBtn").addEventListener("click", () => {
-      modalTitle.textContent = item.title;
-      modalContent.textContent = item.content;
-      modal.showModal();
-    });
+data.forEach(item => {
 
-    container.appendChild(div);
-  });
+const card = document.createElement("section");
+
+card.classList.add("card");
+
+card.innerHTML = `
+<span class="badge ${item.type.toLowerCase()}">${item.type}</span>
+
+<h3>${item.title}</h3>
+
+<p><strong>Theme:</strong> ${item.theme}</p>
+
+<p><strong>Mood:</strong> ${item.mood}</p>
+
+<p><strong>Reading Time:</strong> ${item.readingTime}</p>
+
+<button class="read-more">Read More</button>
+`;
+
+card.querySelector(".read-more").addEventListener("click", () => {
+
+openModal(item);
+
+});
+
+container.appendChild(card);
+
+});
+
 }
 
 document.querySelectorAll("#filters button").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const filter = btn.dataset.filter;
 
-    if (filter === "all") {
-      display(allData);
-    } else {
-      display(allData.filter(i => i.type === filter));
-    }
-  });
+btn.addEventListener("click", () => {
+
+const filter = btn.dataset.filter;
+
+if(filter === "all") {
+
+displayLyrics(allLyrics);
+
+}
+else {
+
+displayLyrics(
+
+allLyrics.filter(item => item.type === filter)
+
+);
+
+}
+
 });
 
-closeModal.addEventListener("click", () => {
-  modal.close();
 });
 
-loadData();
+modalClose.addEventListener("click", closeModal);
+
+getLyrics();
