@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Thank You</title>
+    <title>Thank You</title>
 
-<link rel="stylesheet" href="styles/final.css">
+    <link rel="stylesheet" href="styles/final.css">
 
 </head>
 
 <body>
 
-<main class="thankyou">
 
-<h1>Thank You!</h1>
+    <main class="thankyou">
 
-<p id="results"></p>
+        <h1>Thank You!</h1>
 
-<a href="index.html">Return Home</a>
+        <p id="results"></p>
 
-</main>
+        <a href="index.html">Return Home</a>
 
-<script>
+    </main>
 
-const params = new URLSearchParams(window.location.search);
+    <script>
 
-const name = params.get("name");
-const email = params.get("email");
-const genre = params.get("genre");
+        const params = new URLSearchParams(window.location.search);
 
-document.getElementById("results").innerHTML = `
+        const name = params.get("name");
+        const email = params.get("email");
+        const genre = params.get("genre");
+
+        document.getElementById("results").innerHTML = `
 <strong>Name:</strong> ${name}<br>
 <strong>Email:</strong> ${email}<br>
 <strong>Favorite Genre:</strong> ${genre}
 `;
 
-</script>
+    </script>
 
 </body>
+
 </html>

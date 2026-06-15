@@ -1,18 +1,31 @@
+/* =========================
+   ROOT VARIABLES
+========================= */
 :root {
-  --bg: #F4EFE6;
-  --primary: #A63D56;
-  --dark: #222;
   --white: #ffffff;
+  --black: #000000;
+  --primary: #a63d56;
+  --charcoal-text: #333333;
+}
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
+  font-family: "Inter", sans-serif;
+  color: var(--charcoal-text);
   margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: var(--bg);
-  color: var(--dark);
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -42,7 +55,9 @@ body {
   border-bottom: 2px solid white;
 }
 
-/* HERO */
+/* =========================
+   HERO SECTION
+========================= */
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -62,7 +77,9 @@ body {
   text-align: center;
 }
 
-/* IMAGES */
+/* =========================
+   HERO IMAGES
+========================= */
 .hero-images {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -82,7 +99,9 @@ body {
   transform: scale(1.05);
 }
 
-/* SECTION */
+/* =========================
+   SECTION STYLING
+========================= */
 .section-title {
   text-align: center;
   margin-top: 2rem;
@@ -98,10 +117,12 @@ section {
 }
 
 section h2 {
-  color: #A63D56;
+  color: var(--primary);
 }
 
-/* GRID */
+/* =========================
+   GRID LAYOUT
+========================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -109,7 +130,9 @@ section h2 {
   gap: 1.5rem;
 }
 
-/* CARD */
+/* =========================
+   CARD COMPONENT
+========================= */
 .card {
   background: var(--white);
   padding: 1.5rem;
@@ -123,7 +146,9 @@ section h2 {
   transform: translateY(-5px);
 }
 
-/* TEXT */
+/* =========================
+   TEXT CONTENT
+========================= */
 .text {
   white-space: pre-line;
   line-height: 1.8;
@@ -144,13 +169,17 @@ section h2 {
   border-left: 3px solid #9b5cff;
 }
 
-/* AUDIO */
+/* =========================
+   AUDIO
+========================= */
 audio {
   width: 100%;
   margin-top: 10px;
 }
 
-/* BADGE */
+/* =========================
+   BADGES
+========================= */
 .badge {
   display: inline-block;
   padding: 5px 10px;
@@ -169,7 +198,9 @@ audio {
   color: white;
 }
 
-/* READ MORE BUTTON */
+/* =========================
+   BUTTON
+========================= */
 .read-more {
   margin-top: 10px;
   padding: 8px 14px;
@@ -187,30 +218,30 @@ audio {
   transform: translateY(-2px);
 }
 
-/* FULL TEXT (IMPORTANT FIX) */
+/* =========================
+   FULL TEXT DISPLAY
+========================= */
 .full-text {
   margin-top: 12px;
   padding: 14px;
   border-radius: 12px;
-
   background: rgba(255, 255, 255, 0.07);
   border-left: 4px solid #a29bfe;
-
   line-height: 1.7;
   font-size: 0.95rem;
   color: #333;
-
   white-space: pre-line;
-
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* HIDDEN STATE (CRITICAL FIX) */
+/* HIDDEN STATE */
 .hidden {
   display: none !important;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 footer {
   text-align: center;
   padding: 1rem;
@@ -218,7 +249,9 @@ footer {
   margin-top: 2rem;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
 @media (max-width: 768px) {
   .hero {
     grid-template-columns: 1fr;
@@ -237,9 +270,25 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+
+  #menuBtn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
 }
 
-/* ANIMATION */
+/* =========================
+   ANIMATIONS
+========================= */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -251,57 +300,47 @@ footer {
   }
 }
 
-/* STATUS MESSAGES */
+/* =========================
+   STATUS COLORS
+========================= */
 .success { color: #4ade80; }
 .error { color: #f87171; }
 .info { color: #60a5fa; }
 
-body {
-    font-family: 'Inter', sans-serif;
-}
-
-#menuBtn{
-display:none;
-background:none;
-border:none;
-font-size:2rem;
-color:white;
-cursor:pointer;
-}
-
-@media(max-width:768px){
-
-#menuBtn{
-display:block;
-}
-
-.nav-links{
-display:none;
-flex-direction:column;
-width:100%;
-}
-
-.nav-links.show{
-display:flex;
-}
-}
-
-.thankyou{
-max-width:700px;
-margin:3rem auto;
-text-align:center;
-}
-
-form{
-display:flex;
-flex-direction:column;
-gap:1rem;
+/* =========================
+   FORM STYLES
+========================= */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 input,
 textarea,
-select{
-padding:.8rem;
-border:1px solid #ccc;
-border-radius:8px;
+select {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* =========================
+   THANK YOU PAGE
+========================= */
+.thankyou {
+  max-width: 700px;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
+#menuBtn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
 }

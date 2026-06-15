@@ -1,3 +1,8 @@
+/* =========================
+   LARGE SCREEN OVERRIDES
+   (Desktop: 768px+)
+========================= */
+
 :root {
     --bg-cream: #F4EFE6;
     --berry-red: #A63D56;
@@ -6,94 +11,45 @@
     --white: #FFFFFF;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--bg-cream);
-    color: var(--charcoal-text);
-    margin: 0;
-}
+/* =========================
+   LAYOUT ADJUSTMENTS
+========================= */
 
-/* Header */
-header {
-    background-color: var(--berry-red);
-    color: var(--white);
-    text-align: center;
-    padding: 2rem;
-}
+@media screen and (min-width: 768px) {
 
-/* Main */
-main {
-    max-width: 600px;
-    margin: 20px auto;
-    background: var(--white);
-    padding: 25px;
-    border-radius: 6px;
-    box-shadow: 4px 4px 0 var(--sand-tan);
-}
-
-/* Form */
-form {
+  /* NAVIGATION (desktop layout) */
+  nav {
     display: flex;
-    flex-direction: column;
-}
+    justify-content: space-between;
+    align-items: center;
+  }
 
-label {
-    margin-top: 10px;
-    font-weight: bold;
-}
+  /* GRID IMPROVEMENT */
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
 
-input, select, textarea {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid var(--sand-tan);
-    border-radius: 4px;
-}
+  /* MAIN LAYOUT (wider screens) */
+  main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+  }
 
-/* Fieldsets */
-fieldset {
-    margin-top: 15px;
-    padding: 10px;
-    border: 1px solid var(--sand-tan);
-}
+  /* FORM LAYOUT (if used on form page) */
+  form {
+    max-width: 700px;
+    margin: auto;
+  }
 
-legend {
-    color: var(--berry-red);
-    font-weight: bold;
-}
+  /* OPTIONAL: improve spacing */
+  header {
+    padding: 3rem;
+  }
 
-/* Button */
-input[type="submit"] {
-    margin-top: 20px;
-    background-color: var(--berry-red);
-    color: var(--white);
-    border: none;
-    padding: 12px;
-    cursor: pointer;
-}
+  footer {
+    padding: 2rem;
+  }
 
-input[type="submit"]:hover {
-    background-color: #8a3046;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: var(--berry-red);
-    color: var(--white);
-}
-
-/* ✅ MEDIA QUERY */
-@media screen and (max-width: 600px) {
-    main {
-        margin: 10px;
-        padding: 15px;
-    }
-
-    input, select, textarea {
-        width: 100%;
-    }
-}
-body {
-    font-family: 'Inter', sans-serif;
 }
