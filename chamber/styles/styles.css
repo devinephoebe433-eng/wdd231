@@ -35,12 +35,7 @@ main {
   padding: 1rem;
 }
 
-h1 {
-  text-align: center;
-  color: #1d3557;
-}
-
-h2 {
+h1, h2 {
   color: #1d3557;
 }
 
@@ -76,6 +71,11 @@ section {
   margin: 10px;
   padding: 20px;
   border-radius: 8px;
+}
+
+/* ✅ FIX: removes white-on-white issue */
+p {
+  color: #222222;
 }
 
 #forecast p {
