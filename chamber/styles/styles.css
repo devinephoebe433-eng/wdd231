@@ -5,6 +5,7 @@ body {
   color: #222222;
 }
 
+/* HEADER */
 header {
   background-color: #1d3557;
   color: white;
@@ -12,6 +13,13 @@ header {
   text-align: center;
 }
 
+/* FIX: ensure ALL header text is readable */
+header p,
+header a {
+  color: white;
+}
+
+/* NAV */
 nav {
   display: flex;
   justify-content: center;
@@ -29,6 +37,7 @@ nav a.active {
   border-bottom: 2px solid #ffd700;
 }
 
+/* MAIN */
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -39,6 +48,7 @@ h1, h2 {
   color: #1d3557;
 }
 
+/* HERO */
 .hero {
   position: relative;
 }
@@ -56,6 +66,7 @@ h1, h2 {
   color: white;
 }
 
+/* CTA */
 .cta {
   display: inline-block;
   margin-top: 10px;
@@ -66,6 +77,7 @@ h1, h2 {
   font-weight: bold;
 }
 
+/* SECTIONS */
 section {
   background: white;
   margin: 10px;
@@ -73,17 +85,19 @@ section {
   border-radius: 8px;
 }
 
-/* ✅ FIX: removes white-on-white issue */
+/* FIX: remove accessibility issue */
 p {
   color: #222222;
 }
 
+/* FORECAST */
 #forecast p {
   background: #e9ecef;
   padding: 8px;
   margin: 5px 0;
 }
 
+/* SPOTLIGHT */
 #spotlight-container {
   display: grid;
   gap: 10px;
@@ -102,9 +116,16 @@ p {
   height: auto;
 }
 
+/* FOOTER */
 footer {
   background: #1d3557;
   color: white;
   text-align: center;
   padding: 1rem;
+}
+
+/* FIX: footer text contrast issue */
+footer p,
+footer a {
+  color: white;
 }

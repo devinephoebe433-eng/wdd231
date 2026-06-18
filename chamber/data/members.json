@@ -4,7 +4,7 @@
     "address": "Kampala, Uganda",
     "phone": "+256700000001",
     "website": "https://example.com",
-    "image": "chamber/images/electronics.jpg",
+    "image": "images/electronics.jpg",
     "membership": "Gold"
   },
   {
@@ -12,7 +12,7 @@
     "address": "Kampala",
     "phone": "+256700000002",
     "website": "https://example.com",
-    "image": "chamber/images/citybuilders.png",
+    "image": "images/citybuilders.png",
     "membership": "Silver"
   },
   {
@@ -20,7 +20,7 @@
     "address": "Kampala",
     "phone": "+256700000003",
     "website": "https://example.com",
-    "image": "chamber/images/green.png",
+    "image": "images/green.png",
     "membership": "Gold"
   },
   {
@@ -28,7 +28,7 @@
     "address": "Kampala",
     "phone": "+256700000004",
     "website": "https://example.com",
-    "image": "chamber/images/transport.png",
+    "image": "images/transport.png",
     "membership": "Bronze"
   },
   {
@@ -36,7 +36,7 @@
     "address": "Kampala",
     "phone": "+256700000005",
     "website": "https://example.com",
-    "image": "chamber/images/hotels.jpg",
+    "image": "images/hotel.jpg",
     "membership": "Silver"
   },
   {
@@ -44,7 +44,7 @@
     "address": "Kampala",
     "phone": "+256700000006",
     "website": "https://example.com",
-    "image": "chamber/images/farm.jpg",
+    "image": "images/farm.jpg",
     "membership": "Gold"
   },
   {
@@ -52,7 +52,7 @@
     "address": "Kampala",
     "phone": "+256700000007",
     "website": "https://example.com",
-    "image": "chamber/images/fashion.jpg",
+    "image": "images/fashion.jpg",
     "membership": "Bronze"
   }
 ]

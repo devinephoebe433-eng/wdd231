@@ -8,9 +8,9 @@ document.getElementById("lastModified").textContent =
   document.lastModified;
 
 // =====================
-// WEATHER API
+// WEATHER API (unchanged)
 // =====================
-const apiKey = "YOUR_API_KEY_HERE"; // keep your real key
+const apiKey = "6ddd9d48db681af95548a02054736f26";
 const city = "Kampala";
 
 async function getWeather() {
@@ -53,31 +53,31 @@ async function getWeather() {
 getWeather();
 
 // =====================
-// SPOTLIGHT MEMBERS
+// SPOTLIGHT MEMBERS (FIXED)
 // =====================
 async function loadSpotlights() {
   try {
     const response = await fetch("data/members.json");
     const members = await response.json();
 
-    const qualified = members.filter(
-      member =>
-        member.membership.toLowerCase() === "gold" ||
-        member.membership.toLowerCase() === "silver"
+    // Only Gold + Silver members
+    const qualified = members.filter(member =>
+      member.membership.toLowerCase() === "gold" ||
+      member.membership.toLowerCase() === "silver"
     );
 
+    // Shuffle and pick 3
     const selected = qualified
       .sort(() => 0.5 - Math.random())
       .slice(0, 3);
 
     const container = document.getElementById("spotlight-container");
-
     container.innerHTML = "";
 
     selected.forEach(member => {
       container.innerHTML += `
         <div class="card">
-          <img src="${member.logo}" alt="${member.name}" loading="lazy">
+          <img src="${member.image}" alt="${member.name}" loading="lazy">
           <h3>${member.name}</h3>
           <p>${member.membership}</p>
           <p>${member.phone}</p>
@@ -86,6 +86,7 @@ async function loadSpotlights() {
         </div>
       `;
     });
+
   } catch (error) {
     console.error("Error loading members:", error);
   }
