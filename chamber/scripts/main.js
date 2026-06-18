@@ -1,62 +1,94 @@
 // =====================
+// FOOTER
+// =====================
+document.getElementById("current-year").textContent =
+  new Date().getFullYear();
+
+document.getElementById("lastModified").textContent =
+  document.lastModified;
+
+// =====================
 // WEATHER API
 // =====================
-
-const apiKey = "YOUR_API_KEY"; // replace this
+const apiKey = "YOUR_API_KEY_HERE"; // keep your real key
 const city = "Kampala";
 
-fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`)
-  .then(res => res.json())
-  .then(data => {
+async function getWeather() {
+  try {
+    const response = await fetch(
+      `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`
+    );
 
-    document.getElementById("temp").textContent = data.list[0].main.temp;
-    document.getElementById("desc").textContent = data.list[0].weather[0].description;
+    const data = await response.json();
+
+    if (!data.list) throw new Error("Weather data not found");
+
+    document.getElementById("temp").textContent =
+      Math.round(data.list[0].main.temp);
+
+    document.getElementById("desc").textContent =
+      data.list[0].weather[0].description;
 
     const forecast = document.getElementById("forecast");
     forecast.innerHTML = "";
 
     for (let i = 0; i < 3; i++) {
-      let day = data.list[i * 8];
+      const day = data.list[i * 8];
 
       forecast.innerHTML += `
         <p>
-          Day ${i + 1}: ${day.main.temp}°C - ${day.weather[0].description}
+          Day ${i + 1}: ${Math.round(day.main.temp)}°C -
+          ${day.weather[0].description}
         </p>
       `;
     }
-  });
+  } catch (error) {
+    console.error(error);
 
+    document.getElementById("temp").textContent = "--";
+    document.getElementById("desc").textContent = "Weather unavailable";
+  }
+}
+
+getWeather();
 
 // =====================
 // SPOTLIGHT MEMBERS
 // =====================
-
 async function loadSpotlights() {
-  const res = await fetch("data/members.json");
-  const members = await res.json();
+  try {
+    const response = await fetch("data/members.json");
+    const members = await response.json();
 
-  const filtered = members.filter(m =>
-    m.membership === "gold" || m.membership === "silver"
-  );
+    const qualified = members.filter(
+      member =>
+        member.membership.toLowerCase() === "gold" ||
+        member.membership.toLowerCase() === "silver"
+    );
 
-  const shuffled = filtered.sort(() => 0.5 - Math.random());
-  const selected = shuffled.slice(0, 3);
+    const selected = qualified
+      .sort(() => 0.5 - Math.random())
+      .slice(0, 3);
 
-  const container = document.getElementById("spotlight-container");
-  container.innerHTML = "";
+    const container = document.getElementById("spotlight-container");
 
-  selected.forEach(m => {
-    container.innerHTML += `
-      <div class="card">
-        <img src="${m.logo}" alt="${m.name}">
-        <h3>${m.name}</h3>
-        <p>${m.membership}</p>
-        <p>${m.phone}</p>
-        <p>${m.address}</p>
-        <a href="${m.website}" target="_blank">Visit Website</a>
-      </div>
-    `;
-  });
+    container.innerHTML = "";
+
+    selected.forEach(member => {
+      container.innerHTML += `
+        <div class="card">
+          <img src="${member.logo}" alt="${member.name}" loading="lazy">
+          <h3>${member.name}</h3>
+          <p>${member.membership}</p>
+          <p>${member.phone}</p>
+          <p>${member.address}</p>
+          <a href="${member.website}" target="_blank">Visit Website</a>
+        </div>
+      `;
+    });
+  } catch (error) {
+    console.error("Error loading members:", error);
+  }
 }
 
 loadSpotlights();

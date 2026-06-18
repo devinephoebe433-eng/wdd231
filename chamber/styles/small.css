@@ -1,14 +1,8 @@
-body {
-  font-family: "Roboto", Arial, sans-serif;
-  margin: 0;
-  background-color: #f8f9fa;
-  color: #222222;
-}
+/* MOBILE STYLES */
 
-/* HAMBURGER */
 #hamburger {
   display: block;
-  background-color: transparent;
+  background: transparent;
   border: 2px solid #ffffff;
   color: #ffffff;
   font-size: 1.5rem;
@@ -17,7 +11,6 @@ body {
   margin: 0.5rem auto;
 }
 
-/* NAV */
 .navigation {
   display: none;
   flex-direction: column;
@@ -39,42 +32,12 @@ body {
   color: #1d3557;
 }
 
-/* MAIN */
-main {
-  padding: 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-h1 {
-  text-align: center;
-  color: #1d3557;
-}
-
-/* BUTTONS */
-button {
-  padding: 0.7rem 1.2rem;
-  border: none;
-  border-radius: 8px;
-  background-color: #1d3557;
-  color: #ffffff;
-}
-
-/* GRID */
 .grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
 }
 
-/* CARD */
-.card {
-  background-color: #ffffff;
-  padding: 1.2rem;
-  border-radius: 12px;
-}
-
-/* JOIN PAGE */
 .join-main {
   display: flex;
   flex-direction: column;
@@ -101,25 +64,16 @@ select {
   border-radius: 5px;
 }
 
-/* SUBMIT */
 .submit-btn {
   background-color: #ffd700;
   color: #1d3557;
   padding: 12px;
   border-radius: 8px;
   font-weight: bold;
+  cursor: pointer;
 }
 
-/* MEMBERSHIP */
 .membership-cards {
   display: grid;
   gap: 15px;
-}
-
-/* FOOTER */
-footer {
-  background-color: #1d3557;
-  color: #ffffff;
-  text-align: center;
-  padding: 1rem;
 }

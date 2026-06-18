@@ -1,19 +1,17 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   margin: 0;
   background-color: #f4f4f4;
   color: #222222;
 }
 
-/* HEADER */
 header {
   background-color: #1d3557;
-  color: #ffffff;
+  color: white;
   padding: 1rem;
   text-align: center;
 }
 
-/* NAVIGATION */
 nav {
   display: flex;
   justify-content: center;
@@ -22,7 +20,7 @@ nav {
 }
 
 nav a {
-  color: #ffffff;
+  color: white;
   text-decoration: none;
   padding: 10px;
 }
@@ -31,7 +29,21 @@ nav a.active {
   border-bottom: 2px solid #ffd700;
 }
 
-/* HERO */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1 {
+  text-align: center;
+  color: #1d3557;
+}
+
+h2 {
+  color: #1d3557;
+}
+
 .hero {
   position: relative;
 }
@@ -39,49 +51,47 @@ nav a.active {
 .hero img {
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .hero-text {
   position: absolute;
   bottom: 20px;
   left: 20px;
-  color: #ffffff;
+  color: white;
 }
 
 .cta {
   display: inline-block;
   margin-top: 10px;
-  background-color: #ffd700;
-  color: #000000;
   padding: 10px 15px;
-  font-weight: bold;
+  background: #ffd700;
+  color: black;
   text-decoration: none;
+  font-weight: bold;
 }
 
-/* SECTIONS */
 section {
-  background-color: #ffffff;
-  padding: 20px;
+  background: white;
   margin: 10px;
+  padding: 20px;
   border-radius: 8px;
 }
 
-/* WEATHER */
 #forecast p {
-  background-color: #e9ecef;
+  background: #e9ecef;
   padding: 8px;
   margin: 5px 0;
 }
 
-/* SPOTLIGHT */
 #spotlight-container {
   display: grid;
   gap: 10px;
 }
 
 .card {
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
+  background: white;
+  border: 1px solid #ddd;
   border-radius: 8px;
   padding: 10px;
   text-align: center;
@@ -89,12 +99,12 @@ section {
 
 .card img {
   width: 80px;
+  height: auto;
 }
 
-/* FOOTER */
 footer {
-  background-color: #1d3557;
-  color: #ffffff;
+  background: #1d3557;
+  color: white;
   text-align: center;
-  padding: 10px;
+  padding: 1rem;
 }
